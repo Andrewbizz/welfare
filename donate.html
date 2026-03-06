@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Donate - Hope Displaced</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ── Donate page custom styles ── */
+
+    /* Amount picker */
+    .amount-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .amount-btn {
+      background: #fff;
+      border: 2px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 12px 6px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #333;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .amount-btn:hover {
+      border-color: #F96D00;
+      color: #F96D00;
+    }
+
+    .amount-btn.active {
+      background: #F96D00;
+      border-color: #F96D00;
+      color: #fff;
+    }
+
+    .custom-amount-wrap {
+      margin-bottom: 18px;
+      position: relative;
+    }
+
+    .custom-amount-wrap span {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-weight: 700;
+      color: #888;
+      font-size: 1.1rem;
+    }
+
+    .custom-amount-wrap input {
+      padding-left: 28px;
+      border: 2px solid #e0e0e0;
+      border-radius: 6px;
+      width: 100%;
+      height: 48px;
+      font-size: 1rem;
+      color: #333;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .custom-amount-wrap input:focus {
+      border-color: #F96D00;
+    }
+
+    /* Payment tabs */
+    .pay-tabs {
+      display: flex;
+      gap: 0;
+      margin-bottom: 24px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid #F96D00;
+    }
+
+    .pay-tab {
+      flex: 1;
+      padding: 12px;
+      text-align: center;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.95rem;
+      background: #fff;
+      color: #F96D00;
+      transition: all 0.2s;
+      letter-spacing: 0.5px;
+    }
+
+    .pay-tab.active {
+      background: #F96D00;
+      color: #fff;
+    }
+
+    .pay-tab:first-child {
+      border-right: 1px solid #F96D00;
+    }
+
+    /* Crypto panel */
+    .crypto-coins {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .coin-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: 2px solid #e0e0e0;
+      background: #fff;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #444;
+      transition: all 0.2s;
+    }
+
+    .coin-btn:hover {
+      border-color: #F96D00;
+    }
+
+    .coin-btn.active {
+      border-color: #F96D00;
+      background: #fff7f2;
+    }
+
+    .coin-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .coin-icon.btc {
+      background: #F7931A;
+    }
+
+    .coin-icon.eth {
+      background: #627EEA;
+    }
+
+    .coin-icon.sol {
+      background: #9945FF;
+    }
+
+    .coin-icon.usdc {
+      background: #2775CA;
+    }
+
+    .wallet-box {
+      background: #f8f8f8;
+      border: 1.5px dashed #ccc;
+      border-radius: 8px;
+      padding: 18px 16px;
+      margin-bottom: 16px;
+    }
+
+    .wallet-label {
+      font-size: 0.8rem;
+      color: #888;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .wallet-addr {
+      font-family: monospace;
+      font-size: 0.82rem;
+      color: #333;
+      word-break: break-all;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .copy-btn {
+      background: #F96D00;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 7px 18px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .copy-btn:hover {
+      background: #d45a00;
+    }
+
+    .copy-confirm {
+      font-size: 0.8rem;
+      color: #2ecc71;
+      margin-left: 10px;
+      display: none;
+    }
+
+    .crypto-note {
+      background: #fff8e1;
+      border-left: 4px solid #F96D00;
+      padding: 12px 16px;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.85rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Card under-construction */
+    .card-construction {
+      background: #f8f8f8;
+      border: 1.5px dashed #ccc;
+      border-radius: 8px;
+      padding: 36px 24px;
+      text-align: center;
+    }
+
+    .card-construction .icon-wrench-big {
+      font-size: 2.5rem;
+      color: #F96D00;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .card-construction h4 {
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .card-construction p {
+      color: #777;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    /* Live feed */
+    .live-feed-wrap {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+      padding: 24px;
+      height: 100%;
+    }
+
+    .live-feed-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #F96D00;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .live-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #2ecc71;
+      display: inline-block;
+      animation: pulse 1.4s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(1.3);
+      }
+    }
+
+    .feed-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid #f0f0f0;
+      animation: fadeSlide 0.5s ease;
+    }
+
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .feed-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .feed-info {
+      flex: 1;
+    }
+
+    .feed-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .feed-detail {
+      font-size: 0.8rem;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    .feed-amount {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #F96D00;
+      white-space: nowrap;
+    }
+
+    /* Impact stats bar */
+    .impact-bar {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      padding: 36px 0;
+    }
+
+    .impact-stat {
+      text-align: center;
+      color: #fff;
+    }
+
+    .impact-stat .num {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #F96D00;
+      display: block;
+    }
+
+    .impact-stat .lbl {
+      font-size: 0.85rem;
+      opacity: 0.75;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Transparency cards */
+    .trust-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+      padding: 28px 24px;
+      height: 100%;
+      border-top: 4px solid #F96D00;
+    }
+
+    .trust-card h4 {
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .trust-card p {
+      color: #666;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Donate form card */
+    .donate-form-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.09);
+      padding: 36px 32px;
+    }
+
+    .donate-form-card h3 {
+      font-weight: 800;
+      color: #222;
+      margin-bottom: 6px;
+    }
+
+    .donate-form-card .sub {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+    }
+
+    .donate-form-card label {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #555;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .section-divider {
+      border: none;
+      border-top: 1px solid #eee;
+      margin: 20px 0;
+    }
+
+    .donate-submit {
+      width: 100%;
+      padding: 15px;
+      background: #F96D00;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+      letter-spacing: 0.5px;
+      margin-top: 8px;
+    }
+
+    .donate-submit:hover {
+      background: #d45a00;
+    }
+
+    .panel {
+      display: none;
+    }
+
+    .panel.active {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Hope Displaced</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="causes.html" class="nav-link">Who We Serve</a></li>
+          <li class="nav-item active"><a href="donate.html" class="nav-link">Donate</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li class="nav-item"><a href="event.html" class="nav-link">Events</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero-wrap" style="background-image: url('images/bg_7.jpg');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+        <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+          <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a
+                href="index.html">Home</a></span> <span>Donate</span></p>
+          <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Make a Difference Today
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Impact stats bar -->
+  <div class="impact-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-3">
+          <div class="impact-stat">
+            <span class="num" id="stat-raised">$0</span>
+            <span class="lbl">Total Raised</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="impact-stat">
+            <span class="num" id="stat-donors">0</span>
+            <span class="lbl">Total Donors</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mt-3 mt-md-0">
+          <div class="impact-stat">
+            <span class="num">12</span>
+            <span class="lbl">Regions Served</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mt-3 mt-md-0">
+          <div class="impact-stat">
+            <span class="num">6</span>
+            <span class="lbl">Aid Programs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main donate section -->
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row">
+
+        <!-- LEFT: Donate form -->
+        <div class="col-md-7 ftco-animate mb-5 mb-md-0">
+          <div class="donate-form-card">
+            <h3>Support a Displaced Family</h3>
+            <p class="sub">100% of your donation goes directly to families in need. All funds are tracked and reported.
+            </p>
+
+            <!-- Amount picker -->
+            <label>Select an Amount (USD)</label>
+            <div class="amount-grid">
+              <button class="amount-btn" onclick="selectAmount(this, 25)">$25</button>
+              <button class="amount-btn active" onclick="selectAmount(this, 50)">$50</button>
+              <button class="amount-btn" onclick="selectAmount(this, 100)">$100</button>
+              <button class="amount-btn" onclick="selectAmount(this, 250)">$250</button>
+              <button class="amount-btn" onclick="selectAmount(this, 500)">$500</button>
+              <button class="amount-btn" onclick="selectAmount(this, 1000)">$1,000</button>
+            </div>
+            <div class="custom-amount-wrap">
+              <span>$</span>
+              <input type="number" id="custom-amount" placeholder="Or enter a custom amount"
+                oninput="clearAmountBtns()">
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Payment method tabs -->
+            <label>Payment Method</label>
+            <div class="pay-tabs">
+              <div class="pay-tab active" onclick="switchTab('crypto')">🔐 Crypto</div>
+              <div class="pay-tab" onclick="switchTab('card')">💳 Credit Card</div>
+            </div>
+
+            <!-- Crypto panel -->
+            <div id="panel-crypto" class="panel active">
+              <label>Select Currency</label>
+              <div class="crypto-coins">
+                <div class="coin-btn active" onclick="selectCoin(this, 'btc')">
+                  <div class="coin-icon btc">₿</div> Bitcoin
+                </div>
+                <div class="coin-btn" onclick="selectCoin(this, 'eth')">
+                  <div class="coin-icon eth">Ξ</div> Ethereum
+                </div>
+                <div class="coin-btn" onclick="selectCoin(this, 'sol')">
+                  <div class="coin-icon sol">◎</div> Solana
+                </div>
+                <div class="coin-btn" onclick="selectCoin(this, 'usdc')">
+                  <div class="coin-icon usdc">$</div> USDC
+                </div>
+              </div>
+
+              <div class="wallet-box">
+                <div class="wallet-label" id="wallet-coin-label">Bitcoin (BTC) Wallet Address</div>
+                <div class="wallet-addr" id="wallet-address">bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh</div>
+                <button class="copy-btn" onclick="copyAddress()">Copy Address</button>
+                <span class="copy-confirm" id="copy-confirm">✓ Copied!</span>
+              </div>
+
+              <div class="crypto-note">
+                <strong>How to donate:</strong> Send any amount to the wallet address above using your preferred crypto
+                wallet. Once the transaction confirms on-chain, your donation is received. Please email
+                <strong>help@hopedisplaced.org</strong> with your transaction hash if you'd like a receipt.
+              </div>
+            </div>
+
+            <!-- Card panel -->
+            <div id="panel-card" class="panel">
+              <div class="card-construction">
+                <span class="flaticon-donation icon-wrench-big"></span>
+                <h4>Credit Card Payments — Coming Soon</h4>
+                <p>We're currently setting up our secure card payment processor. In the meantime, please donate via
+                  crypto or reach out to us directly at <strong>help@hopedisplaced.org</strong> to arrange an
+                  alternative.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- RIGHT: Live donor feed -->
+        <div class="col-md-5 ftco-animate">
+          <div class="live-feed-wrap">
+            <div class="live-feed-title">
+              <span class="live-dot"></span> Live Donations
+            </div>
+            <div id="live-feed"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Transparency section -->
+  <section class="ftco-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section ftco-animate text-center">
+          <h2 class="mb-4">Our Commitment to Transparency</h2>
+          <p>Every dollar is accounted for. We operate with clear accountability standards so donors can give with
+            confidence.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="trust-card">
+            <h4>📋 All Aid Is Documented</h4>
+            <p>Every assistance provided — housing, food, travel, medical referrals — is logged and tied to a specific
+              family case. Nothing falls through the cracks.</p>
+          </div>
+        </div>
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="trust-card">
+            <h4>💰 Funds Are Tracked</h4>
+            <p>Donations are allocated directly to active aid programs. We publish periodic fund usage reports and
+              welcome inquiries from donors at any time.</p>
+          </div>
+        </div>
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="trust-card">
+            <h4>🔒 Family Privacy Protected</h4>
+            <p>We maintain strict discretion to protect the safety and privacy of every family we serve. No identifying
+              information is ever shared publicly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="ftco-footer ftco-section img">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-3">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">About Us</h2>
+            <p>We provide safe, structured, and dignified support to displaced U.S. families in Mexico until stability
+              is restored or relocation is secured.</p>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Recent Updates</h2>
+            <div class="block-21 mb-4 d-flex">
+              <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+              <div class="text">
+                <h3 class="heading"><a href="#">How we helped 12 families relocate safely from Jalisco</a></h3>
+                <div class="meta">
+                  <div><a href="#"><span class="icon-calendar"></span> Feb 20, 2026</a></div>
+                  <div><a href="#"><span class="icon-person"></span> Staff</a></div>
+                  <div><a href="#"><span class="icon-chat"></span> 11</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-21 mb-4 d-flex">
+              <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+              <div class="text">
+                <h3 class="heading"><a href="#">New consular support partnerships expand our reach in 2026</a></h3>
+                <div class="meta">
+                  <div><a href="#"><span class="icon-calendar"></span> Jan 15, 2026</a></div>
+                  <div><a href="#"><span class="icon-person"></span> Staff</a></div>
+                  <div><a href="#"><span class="icon-chat"></span> 8</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="ftco-footer-widget mb-4 ml-md-4">
+            <h2 class="ftco-heading-2">Site Links</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="py-2 d-block">Home</a></li>
+              <li><a href="#" class="py-2 d-block">About</a></li>
+              <li><a href="#" class="py-2 d-block">Donate</a></li>
+              <li><a href="#" class="py-2 d-block">Who We Serve</a></li>
+              <li><a href="#" class="py-2 d-block">Events</a></li>
+              <li><a href="#" class="py-2 d-block">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Have a Question?</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li><span class="icon icon-map-marker"></span><span class="text">Serving displaced families across
+                    affected regions of Mexico</span></li>
+                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+1 800 000 0000</span></a></li>
+                <li><a href="#"><span class="icon icon-envelope"></span><span
+                      class="text">help@hopedisplaced.org</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> Hope Displaced. All rights reserved. | Template
+            by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    /* ── Wallet addresses ── */
+    var wallets = {
+      btc: { label: 'Bitcoin (BTC) Wallet Address', addr: 'bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh' },
+      eth: { label: 'Ethereum (ETH) Wallet Address', addr: '0x71C7656EC7ab88b098defB751B7401B5f6d8976F' },
+      sol: { label: 'Solana (SOL) Wallet Address', addr: 'DYw8jCTfwHNRJhhmFcbXvVDTqWMEVFBX6ZKUmG5CNSKH' },
+      usdc: { label: 'USDC Wallet Address (ERC-20)', addr: '0x71C7656EC7ab88b098defB751B7401B5f6d8976F' }
+    };
+
+    function selectCoin(el, coin) {
+      document.querySelectorAll('.coin-btn').forEach(b => b.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('wallet-coin-label').textContent = wallets[coin].label;
+      document.getElementById('wallet-address').textContent = wallets[coin].addr;
+      document.getElementById('copy-confirm').style.display = 'none';
+    }
+
+    function copyAddress() {
+      var addr = document.getElementById('wallet-address').textContent;
+      navigator.clipboard.writeText(addr).then(function () {
+        var c = document.getElementById('copy-confirm');
+        c.style.display = 'inline';
+        setTimeout(function () { c.style.display = 'none'; }, 2500);
+      });
+    }
+
+    /* ── Amount picker ── */
+    function selectAmount(el, val) {
+      document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('custom-amount').value = '';
+    }
+    function clearAmountBtns() {
+      document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
+    }
+
+    /* ── Tab switch ── */
+    function switchTab(tab) {
+      document.querySelectorAll('.pay-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+    }
+
+    /* ── Live donor feed ── */
+    var firstNames = ['James', 'Maria', 'Robert', 'Linda', 'Carlos', 'Susan', 'David', 'Patricia', 'Michael', 'Barbara',
+      'William', 'Sandra', 'Richard', 'Ashley', 'Joseph', 'Dorothy', 'Thomas', 'Jessica', 'Charles', 'Sarah',
+      'Ana', 'John', 'Emily', 'Daniel', 'Laura', 'Kevin', 'Rachel', 'Steven', 'Megan', 'Brian'];
+    var lastNames = ['Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Miller', 'Davis', 'Garcia', 'Rodriguez', 'Wilson',
+      'Martinez', 'Anderson', 'Taylor', 'Thomas', 'Hernandez', 'Moore', 'Martin', 'Jackson', 'Thompson', 'White'];
+    var causes = ['Emergency Housing', 'Food & Supplies', 'Child Education', 'Medical Referrals', 'Safe Travel', 'Documentation Support'];
+    var methods = ['BTC', 'ETH', 'SOL', 'USDC'];
+    var avatarColors = ['#F96D00', '#2ecc71', '#3498db', '#9b59b6', '#e74c3c', '#1abc9c', '#f39c12', '#627EEA', '#9945FF', '#2775CA'];
+    var timeLabels = ['just now', '1 min ago', '2 mins ago', '3 mins ago', '5 mins ago', '8 mins ago', '12 mins ago'];
+
+    var totalRaised = 47830;
+    var totalDonors = 312;
+
+    function randInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
+    function randItem(arr) { return arr[randInt(0, arr.length - 1)]; }
+
+    function formatAmount(n) {
+      return '$' + n.toLocaleString('en-US');
+    }
+
+    function getInitials(first, last) { return first[0] + last[0]; }
+
+    function updateStats() {
+      document.getElementById('stat-raised').textContent = formatAmount(totalRaised);
+      document.getElementById('stat-donors').textContent = totalDonors.toLocaleString('en-US');
+    }
+
+    function createFeedItem(donor) {
+      var div = document.createElement('div');
+      div.className = 'feed-item';
+      div.innerHTML =
+        '<div class="feed-avatar" style="background:' + donor.color + '">' + donor.initials + '</div>' +
+        '<div class="feed-info">' +
+        '<div class="feed-name">' + donor.name + '</div>' +
+        '<div class="feed-detail">' + donor.cause + ' &nbsp;·&nbsp; ' + donor.method + ' &nbsp;·&nbsp; ' + donor.time + '</div>' +
+        '</div>' +
+        '<div class="feed-amount">' + formatAmount(donor.amount) + '</div>';
+      return div;
+    }
+
+    function buildInitialFeed() {
+      var feed = document.getElementById('live-feed');
+      var items = [];
+      for (var i = 0; i < 8; i++) {
+        var first = randItem(firstNames), last = randItem(lastNames);
+        items.push({
+          name: first + ' ' + last[0] + '.',
+          initials: getInitials(first, last),
+          color: randItem(avatarColors),
+          cause: randItem(causes),
+          method: randItem(methods),
+          amount: randInt(2, 50) * 10,
+          time: timeLabels[i] || (randInt(10, 60) + ' mins ago')
+        });
+      }
+      items.forEach(function (d) { feed.appendChild(createFeedItem(d)); });
+    }
+
+    function addLiveDonor() {
+      var first = randItem(firstNames), last = randItem(lastNames);
+      var amount = randInt(2, 100) * 10;
+      var donor = {
+        name: first + ' ' + last[0] + '.',
+        initials: getInitials(first, last),
+        color: randItem(avatarColors),
+        cause: randItem(causes),
+        method: randItem(methods),
+        amount: amount,
+        time: 'just now'
+      };
+
+      totalRaised += amount;
+      totalDonors += 1;
+      updateStats();
+
+      var feed = document.getElementById('live-feed');
+      var newItem = createFeedItem(donor);
+      feed.insertBefore(newItem, feed.firstChild);
+
+      // Keep max 10 items
+      while (feed.children.length > 10) {
+        feed.removeChild(feed.lastChild);
+      }
+    }
+
+    /* ── Init ── */
+    updateStats();
+    buildInitialFeed();
+
+    // Add a new donor every 4–9 seconds
+    function scheduleDonor() {
+      setTimeout(function () {
+        addLiveDonor();
+        scheduleDonor();
+      }, randInt(4000, 9000));
+    }
+    scheduleDonor();
+  </script>
+
+</body>
+
+</html>

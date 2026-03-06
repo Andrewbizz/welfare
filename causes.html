@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Who We Serve - Hope Displaced</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ── Who We Serve page styles ── */
+
+    .serve-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 18px rgba(0, 0, 0, 0.08);
+      padding: 32px 28px;
+      height: 100%;
+      border-top: 4px solid #F96D00;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .serve-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.13);
+    }
+
+    .serve-card .icon-circle {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #fff4ec;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+    }
+
+    .serve-card h4 {
+      font-weight: 800;
+      color: #222;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .serve-card p {
+      color: #666;
+      font-size: 0.9rem;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .serve-card .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .serve-tag {
+      background: #fff4ec;
+      color: #F96D00;
+      border-radius: 20px;
+      padding: 3px 12px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    /* Alert banner */
+    .alert-banner {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 14px 0;
+      border-bottom: 3px solid #F96D00;
+    }
+
+    .alert-banner .container {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .alert-pill {
+      background: #F96D00;
+      color: #fff;
+      border-radius: 4px;
+      padding: 3px 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+
+    .alert-banner p {
+      margin: 0;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+
+    .alert-banner a {
+      color: #F96D00;
+      font-weight: 600;
+    }
+
+    /* Resource link cards */
+    .resource-card {
+      background: #fff;
+      border-radius: 8px;
+      border: 1.5px solid #eee;
+      padding: 20px 20px 16px;
+      height: 100%;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .resource-card:hover {
+      border-color: #F96D00;
+      box-shadow: 0 4px 14px rgba(249, 109, 0, 0.1);
+    }
+
+    .resource-card .r-icon {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .resource-card h5 {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #222;
+      margin-bottom: 6px;
+    }
+
+    .resource-card p {
+      font-size: 0.83rem;
+      color: #777;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    .resource-card a.r-link {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #F96D00;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .resource-card a.r-link:hover {
+      text-decoration: underline;
+    }
+
+    .r-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      background: #e8f5e9;
+      color: #2e7d32;
+      border-radius: 3px;
+      padding: 1px 7px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    .r-badge.govt {
+      background: #e3f2fd;
+      color: #1565c0;
+    }
+
+    .r-badge.urgent {
+      background: #fce4ec;
+      color: #b71c1c;
+    }
+
+    /* Priority levels */
+    .priority-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .priority-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .priority-dot.high {
+      background: #e53935;
+    }
+
+    .priority-dot.medium {
+      background: #fb8c00;
+    }
+
+    .priority-dot.low {
+      background: #43a047;
+    }
+
+    .priority-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .priority-label.high {
+      color: #e53935;
+    }
+
+    .priority-label.medium {
+      color: #fb8c00;
+    }
+
+    .priority-label.low {
+      color: #43a047;
+    }
+
+    /* Section accent */
+    .section-accent-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #F96D00;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    /* Emergency contact strip */
+    .emergency-strip {
+      background: #e53935;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    .emergency-strip .container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .emergency-strip strong {
+      font-size: 1.05rem;
+    }
+
+    .emergency-strip a {
+      color: #fff;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    .emergency-strip p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Hope Displaced</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item active"><a href="causes.html" class="nav-link">Who We Serve</a></li>
+          <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li class="nav-item"><a href="event.html" class="nav-link">Events</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Live alert banner -->
+  <div class="alert-banner">
+    <div class="container">
+      <span class="alert-pill">🔴 Live Alert</span>
+      <p>The U.S. Embassy Mexico confirmed all consular operations are now normal following the Feb. 22 security
+        operations. U.S. citizens should resume standard precautions.
+        <a href="https://mx.usembassy.gov/security-alert-final-update-ongoing-security-operations-u-s-mission-mexico-february-25-2026/"
+          target="_blank" rel="noopener">Read official update →</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="hero-wrap" style="background-image: url('images/bg_5.jpg');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+        <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+          <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a
+                href="index.html">Home</a></span> <span>Who We Serve</span></p>
+          <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Who We Serve</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Emergency contact strip -->
+  <div class="emergency-strip">
+    <div class="container">
+      <p><strong>🚨 U.S. Emergency Line (24/7):</strong> <a href="tel:+18884074747">+1-888-407-4747</a> (U.S. &amp;
+        Canada) &nbsp;|&nbsp; <a href="tel:+12025014444">+1-202-501-4444</a> (International) &nbsp;|&nbsp; Embassy
+        Mexico City: <a href="tel:+525525792000">(55) 2579-2000</a></p>
+    </div>
+  </div>
+
+  <!-- WHO WE SERVE: Priority groups -->
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-2">
+        <div class="col-md-8 heading-section ftco-animate text-center">
+          <span class="section-accent-title">Priority Groups</span>
+          <h2 class="mb-3">Families We Prioritize for Assistance</h2>
+          <p>Assistance is allocated based on urgency and safety risk. The following groups receive priority support. If
+            you or someone you know falls into one of these categories, <a href="contact.html">contact us
+              immediately</a>.</p>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="serve-card">
+            <div class="icon-circle">🇺🇸</div>
+            <div class="priority-row">
+              <span class="priority-dot high"></span>
+              <span class="priority-label high">Highest Priority</span>
+            </div>
+            <h4>U.S. Citizens in Active Threat Zones</h4>
+            <p>Americans residing in regions under Level 3 or Level 4 State Department advisories — including parts of
+              Jalisco, Michoacán, Guerrero, Sinaloa, and Zacatecas — face the most acute risk and receive immediate case
+              intake.</p>
+            <div class="tag-row">
+              <span class="serve-tag">Immediate Evacuation</span>
+              <span class="serve-tag">Shelter Coordination</span>
+            </div>
+            <a href="https://travel.state.gov/en/international-travel/travel-advisories/mexico.html" target="_blank"
+              rel="noopener" class="btn btn-primary btn-sm px-3 py-2">View State Dept. Advisory →</a>
+          </div>
+        </div>
+
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="serve-card">
+            <div class="icon-circle">👨‍👩‍👧</div>
+            <div class="priority-row">
+              <span class="priority-dot high"></span>
+              <span class="priority-label high">Highest Priority</span>
+            </div>
+            <h4>Families with Children Under 18</h4>
+            <p>Households with minors face compounded challenges: disrupted schooling, emotional trauma, and the need to
+              maintain safe living conditions. These families receive priority intake and education continuity
+              assistance.</p>
+            <div class="tag-row">
+              <span class="serve-tag">Education Support</span>
+              <span class="serve-tag">Child Welfare</span>
+              <span class="serve-tag">Trauma Resources</span>
+            </div>
+            <a href="https://mx.usembassy.gov/services/" target="_blank" rel="noopener"
+              class="btn btn-primary btn-sm px-3 py-2">U.S. Citizen Services →</a>
+          </div>
+        </div>
+
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="serve-card">
+            <div class="icon-circle">🏥</div>
+            <div class="priority-row">
+              <span class="priority-dot high"></span>
+              <span class="priority-label high">Highest Priority</span>
+            </div>
+            <h4>Individuals with Medical Vulnerabilities</h4>
+            <p>U.S. citizens with ongoing medical conditions, limited mobility, or who depend on prescription
+              medications are often the least able to self-evacuate and require coordinated relocation support and
+              medical referrals.</p>
+            <div class="tag-row">
+              <span class="serve-tag">Medical Referrals</span>
+              <span class="serve-tag">Mobility Assistance</span>
+            </div>
+            <a href="https://travel.state.gov/content/travel/en/international-travel/emergencies.html" target="_blank"
+              rel="noopener" class="btn btn-primary btn-sm px-3 py-2">Emergency Help Abroad →</a>
+          </div>
+        </div>
+
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="serve-card">
+            <div class="icon-circle">👴</div>
+            <div class="priority-row">
+              <span class="priority-dot medium"></span>
+              <span class="priority-label medium">High Priority</span>
+            </div>
+            <h4>Retirees &amp; Fixed-Income Households</h4>
+            <p>Many American retirees relocated to Mexico for affordability. Displacement — especially sudden job loss
+              or business closure — disproportionately impacts those on Social Security or fixed pensions with limited
+              emergency reserves.</p>
+            <div class="tag-row">
+              <span class="serve-tag">Emergency Housing</span>
+              <span class="serve-tag">Food Assistance</span>
+              <span class="serve-tag">Relocation Planning</span>
+            </div>
+            <a href="https://mx.usembassy.gov/contact/" target="_blank" rel="noopener"
+              class="btn btn-primary btn-sm px-3 py-2">Contact the Embassy →</a>
+          </div>
+        </div>
+
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="serve-card">
+            <div class="icon-circle">🪪</div>
+            <div class="priority-row">
+              <span class="priority-dot medium"></span>
+              <span class="priority-label medium">High Priority</span>
+            </div>
+            <h4>Dual-National Families</h4>
+            <p>Families holding both U.S. and Mexican citizenship face unique challenges navigating consular systems,
+              documentation requirements, and cross-border family separation when displacement occurs suddenly.</p>
+            <div class="tag-row">
+              <span class="serve-tag">Documentation Help</span>
+              <span class="serve-tag">Consular Guidance</span>
+            </div>
+            <a href="https://mx.usembassy.gov/services/" target="_blank" rel="noopener"
+              class="btn btn-primary btn-sm px-3 py-2">Citizen Services →</a>
+          </div>
+        </div>
+
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="serve-card">
+            <div class="icon-circle">💻</div>
+            <div class="priority-row">
+              <span class="priority-dot low"></span>
+              <span class="priority-label low">Standard Priority</span>
+            </div>
+            <h4>Remote Workers &amp; Expats</h4>
+            <p>U.S. citizens who relocated to Mexico as digital nomads or long-term expats may lack the local networks
+              or legal protections needed to navigate a security crisis independently. We help them connect to resources
+              quickly.</p>
+            <div class="tag-row">
+              <span class="serve-tag">STEP Enrollment</span>
+              <span class="serve-tag">Safe Travel Planning</span>
+            </div>
+            <a href="https://step.state.gov/" target="_blank" rel="noopener"
+              class="btn btn-primary btn-sm px-3 py-2">Enroll in STEP →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFICIAL RESOURCES section -->
+  <section class="ftco-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-2">
+        <div class="col-md-8 heading-section ftco-animate text-center">
+          <span class="section-accent-title">Official Links</span>
+          <h2 class="mb-3">Critical Resources for Displaced Families</h2>
+          <p>These are verified government and official resources. We recommend bookmarking them and enrolling in STEP
+            immediately if you are in an affected region.</p>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="resource-card">
+            <span class="r-icon">📋</span>
+            <h5>Mexico Travel Advisory <span class="r-badge govt">U.S. Gov</span></h5>
+            <p>State-by-state breakdown of current threat levels across all 31 Mexican states. Updated continuously.
+              Check your specific region before making any travel decisions.</p>
+            <a href="https://travel.state.gov/en/international-travel/travel-advisories/mexico.html" target="_blank"
+              rel="noopener" class="r-link">View Advisory <span>↗</span></a>
+          </div>
+        </div>
+
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="resource-card">
+            <span class="r-icon">🔔</span>
+            <h5>Enroll in STEP <span class="r-badge govt">U.S. Gov</span></h5>
+            <p>The Smart Traveler Enrollment Program sends you real-time security alerts from the nearest U.S. Embassy
+              or Consulate. Free for all U.S. citizens abroad. Enroll immediately if you haven't already.</p>
+            <a href="https://step.state.gov/" target="_blank" rel="noopener" class="r-link">Enroll Now
+              <span>↗</span></a>
+          </div>
+        </div>
+
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="resource-card">
+            <span class="r-icon">🚨</span>
+            <h5>U.S. Embassy Mexico — Citizen Alerts <span class="r-badge urgent">Live Updates</span></h5>
+            <p>The official U.S. Embassy in Mexico publishes real-time security alerts for affected regions. Read the
+              Feb. 25 final update on the cartel security operations and current status.</p>
+            <a href="https://mx.usembassy.gov/category/alert/" target="_blank" rel="noopener" class="r-link">Read Alerts
+              <span>↗</span></a>
+          </div>
+        </div>
+
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="resource-card">
+            <span class="r-icon">🛂</span>
+            <h5>Lost or Stolen Passport Abroad <span class="r-badge govt">U.S. Gov</span></h5>
+            <p>Step-by-step official guidance for replacing a lost or stolen U.S. passport while abroad. Includes how to
+              request an emergency passport valid for up to one year and what documents to bring.</p>
+            <a href="https://travel.state.gov/content/travel/en/international-travel/emergencies/lost-stolen-passport-abroad.html"
+              target="_blank" rel="noopener" class="r-link">Passport Help <span>↗</span></a>
+          </div>
+        </div>
+
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="resource-card">
+            <span class="r-icon">🏛️</span>
+            <h5>U.S. Embassy Mexico — Contact &amp; Services <span class="r-badge govt">U.S. Gov</span></h5>
+            <p>Find consulate locations, hours, emergency appointment scheduling, and the general U.S. Citizen Services
+              assistant for all routine and emergency needs in Mexico.</p>
+            <a href="https://mx.usembassy.gov/contact/" target="_blank" rel="noopener" class="r-link">Embassy Contact
+              <span>↗</span></a>
+          </div>
+        </div>
+
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="resource-card">
+            <span class="r-icon">🆘</span>
+            <h5>U.S. Citizens Abroad — Emergency Help <span class="r-badge urgent">Emergency</span></h5>
+            <p>Official State Department guide covering what to do in emergencies abroad: crime, disaster, illness,
+              arrest, or needing to return home. Includes OCS 24/7 contact numbers.</p>
+            <a href="https://travel.state.gov/content/travel/en/international-travel/emergencies.html" target="_blank"
+              rel="noopener" class="r-link">Emergency Guide <span>↗</span></a>
+          </div>
+        </div>
+
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="resource-card">
+            <span class="r-icon">📰</span>
+            <h5>Latest Embassy Security Alerts — Feb 2026 <span class="r-badge urgent">Recent</span></h5>
+            <p>The U.S. Mission Mexico issued multiple alerts following the Feb. 22 cartel operations affecting Jalisco,
+              Michoacán, Guerrero, Nuevo León and other states. Read the most recent updates here.</p>
+            <a href="https://mx.usembassy.gov/security-alert-final-update-ongoing-security-operations-u-s-mission-mexico-february-25-2026/"
+              target="_blank" rel="noopener" class="r-link">Read Latest Alert <span>↗</span></a>
+          </div>
+        </div>
+
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="resource-card">
+            <span class="r-icon">🗺️</span>
+            <h5>Mexico International Travel Information <span class="r-badge govt">U.S. Gov</span></h5>
+            <p>Full country information page for Mexico: entry requirements, local laws, health information, and safety
+              tips from the U.S. Department of State Bureau of Consular Affairs.</p>
+            <a href="https://travel.state.gov/en/international-travel/travel-advisories/mexico.html" target="_blank"
+              rel="noopener" class="r-link">Full Country Info <span>↗</span></a>
+          </div>
+        </div>
+
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="resource-card">
+            <span class="r-icon">💬</span>
+            <h5>U.S. Citizens in Mexico — WhatsApp Channel <span class="r-badge urgent">Live</span></h5>
+            <p>The U.S. Embassy in Mexico operates an official WhatsApp channel for real-time updates. Follow it to
+              receive security alerts directly on your phone without needing to check the website.</p>
+            <a href="https://mx.usembassy.gov/services/" target="_blank" rel="noopener" class="r-link">Find WhatsApp
+              Link <span>↗</span></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Volunteer / Contact CTA -->
+  <section class="ftco-section-3 img" style="background-image: url(images/bg_3.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row d-md-flex">
+        <div class="col-md-6 d-flex ftco-animate">
+          <div class="img img-2 align-self-stretch" style="background-image: url(images/bg_4.jpg);"></div>
+        </div>
+        <div class="col-md-6 volunteer pl-md-5 ftco-animate">
+          <h3 class="mb-3">Are You or Someone You Know Displaced?</h3>
+          <form action="#" class="volunter-form">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+              <textarea name="" id="" cols="30" rows="3" class="form-control"
+                placeholder="Describe your situation and current location (region/state in Mexico)"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Request Assistance" class="btn btn-white py-3 px-5">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="ftco-footer ftco-section img">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-3">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">About Us</h2>
+            <p>We provide safe, structured, and dignified support to displaced U.S. families in Mexico until stability
+              is restored or relocation is secured.</p>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Recent Updates</h2>
+            <div class="block-21 mb-4 d-flex">
+              <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+              <div class="text">
+                <h3 class="heading"><a href="#">How we helped 12 families relocate safely from Jalisco</a></h3>
+                <div class="meta">
+                  <div><a href="#"><span class="icon-calendar"></span> Feb 20, 2026</a></div>
+                  <div><a href="#"><span class="icon-person"></span> Staff</a></div>
+                  <div><a href="#"><span class="icon-chat"></span> 11</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-21 mb-4 d-flex">
+              <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+              <div class="text">
+                <h3 class="heading"><a href="#">New consular support partnerships expand our reach in 2026</a></h3>
+                <div class="meta">
+                  <div><a href="#"><span class="icon-calendar"></span> Jan 15, 2026</a></div>
+                  <div><a href="#"><span class="icon-person"></span> Staff</a></div>
+                  <div><a href="#"><span class="icon-chat"></span> 8</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="ftco-footer-widget mb-4 ml-md-4">
+            <h2 class="ftco-heading-2">Site Links</h2>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="py-2 d-block">Home</a></li>
+              <li><a href="about.html" class="py-2 d-block">About</a></li>
+              <li><a href="donate.html" class="py-2 d-block">Donate</a></li>
+              <li><a href="causes.html" class="py-2 d-block">Who We Serve</a></li>
+              <li><a href="event.html" class="py-2 d-block">Events</a></li>
+              <li><a href="blog.html" class="py-2 d-block">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Have a Question?</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li><span class="icon icon-map-marker"></span><span class="text">Serving displaced families across
+                    affected regions of Mexico</span></li>
+                <li><a href="tel:+18000000000"><span class="icon icon-phone"></span><span class="text">+1 800 000
+                      0000</span></a></li>
+                <li><a href="mailto:help@hopedisplaced.org"><span class="icon icon-envelope"></span><span
+                      class="text">help@hopedisplaced.org</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> Hope Displaced. All rights reserved. | Template
+            by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

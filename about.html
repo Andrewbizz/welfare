@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>About Us - Hope Displaced</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ── About page styles ── */
+
+    .section-accent-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #F96D00;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    /* Value pillars */
+    .value-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 18px rgba(0, 0, 0, 0.07);
+      padding: 30px 24px;
+      height: 100%;
+      border-top: 4px solid #F96D00;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .value-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+    }
+
+    .value-card .v-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .value-card h4 {
+      font-weight: 800;
+      color: #222;
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    .value-card p {
+      color: #666;
+      font-size: 0.9rem;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 32px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 6px;
+      bottom: 0;
+      width: 2px;
+      background: #F96D00;
+      opacity: 0.3;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 32px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -28px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #F96D00;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 2px #F96D00;
+    }
+
+    .timeline-item .t-date {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #F96D00;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .timeline-item h5 {
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+
+    .timeline-item p {
+      color: #666;
+      font-size: 0.88rem;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Team cards */
+    .team-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 14px rgba(0, 0, 0, 0.07);
+      padding: 28px 22px;
+      height: 100%;
+      text-align: center;
+    }
+
+    .team-card .team-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: #fff4ec;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin: 0 auto 16px;
+    }
+
+    .team-card h5 {
+      font-weight: 800;
+      color: #222;
+      margin-bottom: 4px;
+      font-size: 0.95rem;
+    }
+
+    .team-card .role {
+      font-size: 0.8rem;
+      color: #F96D00;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .team-card p {
+      color: #777;
+      font-size: 0.85rem;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Stat highlight bar */
+    .stat-highlight-bar {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      padding: 40px 0;
+    }
+
+    .stat-item {
+      text-align: center;
+      color: #fff;
+    }
+
+    .stat-item .num {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #F96D00;
+      display: block;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-item .lbl {
+      font-size: 0.82rem;
+      opacity: 0.7;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Story blockquote */
+    .story-quote {
+      background: #fff8f4;
+      border-left: 5px solid #F96D00;
+      border-radius: 0 10px 10px 0;
+      padding: 24px 28px;
+      margin: 0;
+    }
+
+    .story-quote p {
+      font-size: 1.05rem;
+      font-style: italic;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .story-quote cite {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #F96D00;
+      font-style: normal;
+    }
+
+    /* Support story cards */
+    .story-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 14px rgba(0, 0, 0, 0.07);
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .story-card .story-top {
+      background: #F96D00;
+      padding: 20px 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .story-card .s-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .story-card .s-name {
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.95rem;
+      margin-bottom: 2px;
+    }
+
+    .story-card .s-loc {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.8rem;
+    }
+
+    .story-card .story-body {
+      padding: 20px 22px;
+    }
+
+    .story-card .story-body p {
+      color: #666;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .story-card .story-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .s-tag {
+      background: #fff4ec;
+      color: #F96D00;
+      border-radius: 20px;
+      padding: 3px 11px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Hope Displaced</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item active"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="causes.html" class="nav-link">Who We Serve</a></li>
+          <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li class="nav-item"><a href="event.html" class="nav-link">Events</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero-wrap" style="background-image: url('images/bg_7.jpg');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+        <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+          <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+            <span class="mr-2"><a href="index.html">Home</a></span> <span>About</span>
+          </p>
+          <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">About Us</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MISSION ── -->
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row d-flex">
+        <div class="col-md-6 d-flex ftco-animate">
+          <div class="img img-about align-self-stretch" style="background-image: url(images/bg_3.jpg); width: 100%;">
+          </div>
+        </div>
+        <div class="col-md-6 pl-md-5 ftco-animate">
+          <span class="section-accent-title">Who We Are</span>
+          <h2 class="mb-4">Safety, Dignity, and a Path Forward</h2>
+          <p>Hope Displaced was founded in response to a crisis that received little mainstream attention: American
+            families — retirees, dual nationals, remote workers, parents with young children — suddenly uprooted by
+            escalating cartel violence across multiple Mexican states, left without housing, income, or a clear way
+            home.</p>
+          <p>We exist to fill that gap. We are a volunteer-led, community-funded organization that connects displaced
+            U.S. families to emergency housing, essential supplies, consular guidance, and safe travel coordination. We
+            do not replace government services — we bridge the distance between a family in crisis and the systems
+            designed to help them.</p>
+          <p>Our work is grounded in three principles: <strong>act fast</strong>, <strong>protect privacy</strong>, and
+            <strong>leave no one behind</strong>. Every case we take is treated with urgency and discretion.</p>
+          <a href="causes.html" class="btn btn-primary px-4 py-3 mt-3">See Who We Serve →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STATS BAR ── -->
+  <div class="stat-highlight-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <span class="num">12+</span>
+            <span class="lbl">Regions Served</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <span class="num">300+</span>
+            <span class="lbl">Families Assisted</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mt-4 mt-md-0">
+          <div class="stat-item">
+            <span class="num">6</span>
+            <span class="lbl">Aid Programs</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mt-4 mt-md-0">
+          <div class="stat-item">
+            <span class="num">100%</span>
+            <span class="lbl">Fund Transparency</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── VALUES ── -->
+  <section class="ftco-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-2">
+        <div class="col-md-7 heading-section ftco-animate text-center">
+          <span class="section-accent-title">What Drives Us</span>
+          <h2 class="mb-3">Our Core Values</h2>
+          <p>Everything we do — from the first intake call to the final travel coordination — is guided by these
+            principles.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="value-card">
+            <span class="v-icon">⚡</span>
+            <h4>Speed in Crisis</h4>
+            <p>When a family contacts us, hours matter. We prioritize rapid case intake, same-day resource referrals,
+              and immediate shelter coordination for families facing active security threats.</p>
+          </div>
+        </div>
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="value-card">
+            <span class="v-icon">🔒</span>
+            <h4>Unconditional Privacy</h4>
+            <p>We never publish names, locations, or case details of the families we serve. Every family's situation is
+              handled with strict discretion to protect their safety and that of those still in the region.</p>
+          </div>
+        </div>
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="value-card">
+            <span class="v-icon">🤝</span>
+            <h4>Dignity First</h4>
+            <p>Displaced families are not statistics. We treat every person with respect, patience, and care — providing
+              structured support without judgment, regardless of how or why they came to be in their situation.</p>
+          </div>
+        </div>
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="value-card">
+            <span class="v-icon">📋</span>
+            <h4>Full Accountability</h4>
+            <p>Every dollar donated is tracked and allocated to a specific program. Every assistance provided is logged.
+              We operate transparently because the families and donors who trust us deserve nothing less.</p>
+          </div>
+        </div>
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="value-card">
+            <span class="v-icon">🌐</span>
+            <h4>Community-Powered</h4>
+            <p>We are funded and staffed by everyday people who believe no American family should be left stranded
+              abroad. Our strength is the network of volunteers, donors, and partner organizations behind us.</p>
+          </div>
+        </div>
+        <div class="col-md-4 ftco-animate mb-4">
+          <div class="value-card">
+            <span class="v-icon">🛤️</span>
+            <h4>Long-Term Thinking</h4>
+            <p>Emergency relief is only the beginning. We work with families on relocation planning, document recovery,
+              and safe transition — supporting them not just through the crisis but into a stable future.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT STARTED / TIMELINE ── -->
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 ftco-animate mb-5 mb-md-0">
+          <span class="section-accent-title">Our Story</span>
+          <h2 class="mb-4">How Hope Displaced Began</h2>
+          <p class="mb-4" style="color:#666; line-height:1.8;">What started as a small network of volunteers sharing
+            resources in a private online group has grown into a coordinated relief organization serving displaced
+            American families across more than a dozen Mexican states. The trigger was simple: too many families were
+            falling through the cracks between overloaded consular offices and underfunded local NGOs.</p>
+
+          <blockquote class="story-quote mb-4">
+            <p>"We got a call from a retired teacher in Jalisco. She had 48 hours to leave her home of 11 years. No one
+              at the Embassy could pick up. That's when we knew this had to become something bigger."</p>
+            <cite>— Hope Displaced Founder</cite>
+          </blockquote>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="t-date">Early 2024</div>
+              <h5>The Network Forms</h5>
+              <p>A private support group of expats, dual nationals, and concerned family members begins coordinating
+                emergency referrals across social media.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="t-date">Mid 2024</div>
+              <h5>First Formal Case Intakes</h5>
+              <p>The network handles its first coordinated relocations — three families from Michoacán — establishing
+                the intake and documentation process still used today.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="t-date">Late 2024</div>
+              <h5>Hope Displaced Launches</h5>
+              <p>The organization officially forms with a volunteer team, a structured aid framework, and its first wave
+                of donor funding to cover emergency housing and travel.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="t-date">2025–2026</div>
+              <h5>Expanding Reach</h5>
+              <p>Aid programs expand to cover documentation support, education continuity, and mental health referrals.
+                Over 300 families assisted across 12+ affected regions.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── TEAM ── -->
+        <div class="col-md-6 ftco-animate">
+          <span class="section-accent-title">The People Behind It</span>
+          <h2 class="mb-4">Our Volunteer Leadership</h2>
+          <div class="row">
+            <div class="col-6 mb-4">
+              <div class="team-card">
+                <div class="team-avatar">👩</div>
+                <h5>Sarah M.</h5>
+                <span class="role">Executive Director</span>
+                <p>Former consular officer with 12 years at the State Department. Leads strategy, partnerships, and
+                  crisis response protocols.</p>
+              </div>
+            </div>
+            <div class="col-6 mb-4">
+              <div class="team-card">
+                <div class="team-avatar">👨</div>
+                <h5>David R.</h5>
+                <span class="role">Operations Lead</span>
+                <p>Coordinates real-time family intake, housing logistics, and volunteer deployment across affected
+                  regions.</p>
+              </div>
+            </div>
+            <div class="col-6 mb-4">
+              <div class="team-card">
+                <div class="team-avatar">👩</div>
+                <h5>Ana L.</h5>
+                <span class="role">Legal &amp; Docs</span>
+                <p>Immigration paralegal specializing in emergency documentation, passport replacement, and consular
+                  coordination for dual nationals.</p>
+              </div>
+            </div>
+            <div class="col-6 mb-4">
+              <div class="team-card">
+                <div class="team-avatar">👨</div>
+                <h5>James T.</h5>
+                <span class="role">Community Outreach</span>
+                <p>Manages our volunteer network, donor relationships, and public communications including our social
+                  channels and alerts.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── COUNTER STRIP ── -->
+  <section class="ftco-counter ftco-intro ftco-intro-2" id="section-counter">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-md-5 d-flex justify-content-center counter-wrap ftco-animate">
+          <div class="block-18 color-1 align-items-stretch">
+            <div class="text">
+              <span>Families Supported Across</span>
+              <strong class="number" data-number="12">0</strong>
+              <span>Affected regions of Mexico and counting</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+          <div class="block-18 color-2 align-items-stretch">
+            <div class="text">
+              <h3 class="mb-4">Donate Now</h3>
+              <p>Your financial contribution funds emergency housing, food, and safe travel for displaced families.</p>
+              <p><a href="donate.html" class="btn btn-white px-3 py-2 mt-2">Donate Now</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+          <div class="block-18 color-3 align-items-stretch">
+            <div class="text">
+              <h3 class="mb-4">Volunteer</h3>
+              <p>Offer your professional skills in law, medicine, or counseling to families who need them most.</p>
+              <p><a href="contact.html" class="btn btn-white px-3 py-2 mt-2">Be A Volunteer</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SUPPORT STORIES ── -->
+  <section class="ftco-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section ftco-animate text-center">
+          <span class="section-accent-title">Real Impact</span>
+          <h2 class="mb-3">Families We've Helped</h2>
+          <p>Behind every case number is a real family. Here are three of the people we've had the privilege to support.
+            Names and identifying details are changed to protect their privacy.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 d-flex mb-4 ftco-animate">
+          <div class="story-card">
+            <div class="story-top">
+              <div class="s-avatar">👨‍👩‍👧</div>
+              <div>
+                <div class="s-name">The Martinez Family</div>
+                <div class="s-loc">📍 Jalisco · Assisted Feb 2026</div>
+              </div>
+            </div>
+            <div class="story-body">
+              <p>A dual-national family of four — two parents and children aged 6 and 9 — were given 36 hours to vacate
+                their home after cartel activity escalated in their colonia. We coordinated emergency shelter in
+                Guadalajara, covered one week of food assistance, and connected them to the U.S. Consulate for passport
+                renewal for both children.</p>
+              <div class="story-tags">
+                <span class="s-tag">Emergency Housing</span>
+                <span class="s-tag">Food Assistance</span>
+                <span class="s-tag">Consular Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 d-flex mb-4 ftco-animate">
+          <div class="story-card">
+            <div class="story-top">
+              <div class="s-avatar">👴👵</div>
+              <div>
+                <div class="s-name">Retired Couple, Michoacán</div>
+                <div class="s-loc">📍 Michoacán · Assisted Jan 2026</div>
+              </div>
+            </div>
+            <div class="story-body">
+              <p>An American couple in their late 60s who retired to Michoacán 8 years ago found themselves unable to
+                safely leave after road closures and local business shutdowns. We arranged safe transit to Mexico City,
+                connected them to a volunteer host family, and coordinated their return flights to Arizona with medical
+                accommodation for one partner's mobility needs.</p>
+              <div class="story-tags">
+                <span class="s-tag">Safe Travel</span>
+                <span class="s-tag">Medical Coordination</span>
+                <span class="s-tag">Relocation Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 d-flex mb-4 ftco-animate">
+          <div class="story-card">
+            <div class="story-top">
+              <div class="s-avatar">👩</div>
+              <div>
+                <div class="s-name">Single Mother, Guanajuato</div>
+                <div class="s-loc">📍 Guanajuato · Assisted Dec 2025</div>
+              </div>
+            </div>
+            <div class="story-body">
+              <p>A U.S. citizen and single mother of two relocated to Guanajuato for cost of living reasons. When
+                violence spiked in her municipality, her children's school closed indefinitely. We connected her to a
+                remote learning program, provided two weeks of grocery assistance, linked her to a trauma counselor, and
+                helped her begin the process of relocating back to the United States.</p>
+              <div class="story-tags">
+                <span class="s-tag">Education Continuity</span>
+                <span class="s-tag">Mental Health</span>
+                <span class="s-tag">Food Assistance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="ftco-footer ftco-section img">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-3">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">About Us</h2>
+            <p>We provide safe, structured, and dignified support to displaced U.S. families in Mexico until stability
+              is restored or relocation is secured.</p>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Recent Updates</h2>
+            <div class="block-21 mb-4 d-flex">
+              <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+              <div class="text">
+                <h3 class="heading"><a href="#">How we helped 12 families relocate safely from Jalisco</a></h3>
+                <div class="meta">
+                  <div><a href="#"><span class="icon-calendar"></span> Feb 20, 2026</a></div>
+                  <div><a href="#"><span class="icon-person"></span> Staff</a></div>
+                  <div><a href="#"><span class="icon-chat"></span> 11</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-21 mb-4 d-flex">
+              <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+              <div class="text">
+                <h3 class="heading"><a href="#">New consular support partnerships expand our reach in 2026</a></h3>
+                <div class="meta">
+                  <div><a href="#"><span class="icon-calendar"></span> Jan 15, 2026</a></div>
+                  <div><a href="#"><span class="icon-person"></span> Staff</a></div>
+                  <div><a href="#"><span class="icon-chat"></span> 8</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="ftco-footer-widget mb-4 ml-md-4">
+            <h2 class="ftco-heading-2">Site Links</h2>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="py-2 d-block">Home</a></li>
+              <li><a href="about.html" class="py-2 d-block">About</a></li>
+              <li><a href="donate.html" class="py-2 d-block">Donate</a></li>
+              <li><a href="causes.html" class="py-2 d-block">Who We Serve</a></li>
+              <li><a href="event.html" class="py-2 d-block">Events</a></li>
+              <li><a href="blog.html" class="py-2 d-block">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Have a Question?</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li><span class="icon icon-map-marker"></span><span class="text">Serving displaced families across
+                    affected regions of Mexico</span></li>
+                <li><a href="tel:+18000000000"><span class="icon icon-phone"></span><span class="text">+1 800 000
+                      0000</span></a></li>
+                <li><a href="mailto:help@hopedisplaced.org"><span class="icon icon-envelope"></span><span
+                      class="text">help@hopedisplaced.org</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> Hope Displaced. All rights reserved. | Template
+            by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
